@@ -1,208 +1,1499 @@
-<!DOCTYPE html> <html lang="ro"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>TitularApp Educatoare – Pregătire pentru titularizare</title>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
 
-<meta name="description" content="Aplicații educaționale pentru pregătirea examenului de titularizare pentru educatoare. Teste de pedagogie, metodică, gramatică și literatură.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <style> * { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: "Nunito", sans-serif; background: #fff9fb; color: #44343b; line-height: 1.6; } a { text-decoration: none; } /* HERO */ .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 20px; position: relative; overflow: hidden; background: radial-gradient(circle at 10% 20%, #ffdce9 0, transparent 25%), radial-gradient(circle at 90% 15%, #e5ddff 0, transparent 25%), linear-gradient(135deg, #fff9fb, #fff2f7); } .hero::before { content: "✿"; position: absolute; top: 8%; left: 8%; font-size: 70px; color: rgba(224, 130, 160, 0.18); transform: rotate(-15deg); } .hero::after { content: "♡"; position: absolute; bottom: 10%; right: 8%; font-size: 100px; color: rgba(178, 146, 220, 0.15); } .hero-content { max-width: 850px; position: relative; z-index: 2; } .logo { width: 82px; height: 82px; margin: 0 auto 22px; border-radius: 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f49bb9, #c99ce9); color: white; font-size: 38px; box-shadow: 0 15px 35px rgba(203, 120, 160, .25); } .badge { display: inline-block; background: #fff; color: #c96b8c; padding: 8px 18px; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 20px; box-shadow: 0 6px 20px rgba(80, 40, 60, .07); } h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.05; font-weight: 800; letter-spacing: -2px; margin-bottom: 24px; color: #3f3037; } h1 span { color: #d66f96; } .hero p { max-width: 650px; margin: 0 auto 35px; font-size: 19px; color: #765f68; } .main-button { display: inline-flex; align-items: center; gap: 10px; background: #242126; color: white; padding: 16px 28px; border-radius: 15px; font-weight: 800; font-size: 17px; box-shadow: 0 12px 25px rgba(35, 30, 35, .18); transition: .25s; } .main-button:hover { transform: translateY(-3px); box-shadow: 0 17px 30px rgba(35, 30, 35, .23); } /* APPS */ .apps { padding: 90px 20px; max-width: 1100px; margin: auto; } .section-title { text-align: center; margin-bottom: 45px; } .section-title small { color: #d66f96; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; } .section-title h2 { font-size: 38px; margin-top: 8px; color: #3f3037; } .section-title p { color: #806c73; margin-top: 10px; } .app-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; } .app-card { background: white; padding: 32px; border-radius: 25px; box-shadow: 0 12px 40px rgba(100, 50, 70, .08); border: 1px solid #f5e5eb; transition: .25s; } .app-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(100, 50, 70, .13); } .app-icon { width: 62px; height: 62px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 30px; margin-bottom: 20px; background: #fff0f5; } .app-card:nth-child(2) .app-icon { background: #f1ecff; } .app-card h3 { font-size: 23px; margin-bottom: 10px; color: #43343a; } .app-card p { color: #796970; margin-bottom: 22px; } .app-button { display: inline-block; background: #d8759b; color: white; padding: 12px 20px; border-radius: 12px; font-weight: 800; transition: .2s; } .app-card:nth-child(2) .app-button { background: #9677ce; } .app-button:hover { transform: translateY(-2px); filter: brightness(.96); } /* BENEFITS */ .benefits { background: #fff; padding: 80px 20px; } .benefits-inner { max-width: 1000px; margin: auto; } .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; } .benefit { text-align: center; padding: 25px; } .benefit-icon { font-size: 35px; margin-bottom: 12px; } .benefit h3 { font-size: 18px; margin-bottom: 7px; } .benefit p { font-size: 14px; color: #806f76; } /* CTA */ .cta { margin: 70px auto; max-width: 1000px; padding: 60px 30px; text-align: center; border-radius: 30px; background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.35), transparent 25%), linear-gradient(135deg, #e994b2, #a98bd9); color: white; box-shadow: 0 20px 50px rgba(180, 100, 150, .2); } .cta h2 { font-size: 38px; margin-bottom: 12px; } .cta p { opacity: .92; margin-bottom: 25px; } .cta-button { display: inline-block; background: white; color: #9c5b79; padding: 14px 25px; border-radius: 13px; font-weight: 800; } /* FOOTER */ footer { text-align: center; padding: 40px 20px; color: #947f87; font-size: 14px; background: #fff9fb; } footer a { color: #c66e91; font-weight: 700; } .footer-links { margin: 12px 0; } .footer-links a { margin: 0 8px; } .footer-disclaimer { max-width: 700px; margin: 15px auto 0; font-size: 12px; color: #a18f96; line-height: 1.6; } /* MOBILE */ @media (max-width: 700px) { .hero { min-height: 90vh; padding: 45px 20px; } h1 { font-size: 45px; } .hero p { font-size: 17px; } .app-grid, .benefit-grid { grid-template-columns: 1fr; } .apps { padding: 65px 20px; } .section-title h2 { font-size: 30px; } .cta { margin: 45px 15px; padding: 45px 22px; } .cta h2 { font-size: 30px; } } </style> </head> <body> <!-- HERO --> <section class="hero">
-<div class="hero-content">
-
-  <div class="logo">📚</div>
-
-  <div class="badge">
-    🌸 Pregătire pentru titularizare
-  </div>
-
-  <h1>
-    Învață. Exersează.<br>
-    <span>Reușește.</span>
-  </h1>
-
-  <p>
-    Aplicații educaționale create pentru educatoare,
-    cu teste de pedagogie, metodică, gramatică și literatură.
-  </p>
-
-  <a
-    class="main-button"
-    href="https://play.google.com/store/apps/dev?id=4987630876494391159"
-    target="_blank"
-    rel="noopener"
-  >
-    ▶ Vezi aplicațiile pe Google Play
-  </a>
-
-</div>
-
-</section> <!-- APPS --> <section class="apps">
-<div class="section-title">
-
-  <small>Aplicațiile noastre</small>
-
-  <h2>Alege ce vrei să exersezi</h2>
-
-  <p>
-    Testează-ți cunoștințele și pregătește-te oriunde, direct de pe telefon.
-  </p>
-
-</div>
-
-
-<div class="app-grid">
-
-  <div class="app-card">
-
-    <div class="app-icon">
-      📖
-    </div>
-
-    <h3>
-      Gramatică & Literatură
-    </h3>
-
-    <p>
-      Teste pentru limba română, gramatică și literatură,
-      concepute pentru pregătirea examenului de titularizare.
-    </p>
-
-    <a
-      class="app-button"
-      href="https://play.google.com/store/apps/details?id=titularapp.educatoare.gr.lit"
-      target="_blank"
-      rel="noopener"
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
-      Vezi aplicația →
-    </a>
 
-  </div>
+    <title>
+        TitularApp Educatoare | Aplicații pentru examenul de titularizare
+    </title>
 
-
-  <div class="app-card">
-
-    <div class="app-icon">
-      🧸
-    </div>
-
-    <h3>
-      Pedagogie & Metodică
-    </h3>
-
-    <p>
-      Exersează pedagogia și metodica pentru învățământul
-      preșcolar prin teste interactive și feedback instant.
-    </p>
-
-    <a
-      class="app-button"
-      href="https://play.google.com/store/apps/details?id=titularapp.quiz.educatoare"
-      target="_blank"
-      rel="noopener"
+    <meta
+        name="description"
+        content="Aplicații pentru pregătirea examenului de titularizare educatoare. Teste de gramatică, literatură, pedagogie și metodică."
     >
-      Vezi aplicația →
-    </a>
 
-  </div>
+    <meta
+        name="theme-color"
+        content="#7657ad"
+    >
 
-</div>
+    <style>
 
-</section> <!-- BENEFITS --> <section class="benefits">
-<div class="benefits-inner">
+        :root {
+            --purple: #7657ad;
+            --purple-dark: #5e4293;
+            --purple-light: #f4effc;
+            --purple-soft: #faf7ff;
 
-  <div class="section-title">
+            --pink: #e89ab9;
+            --pink-light: #fff3f7;
 
-    <small>De ce TitularApp?</small>
+            --text: #403b47;
+            --muted: #817a89;
 
-    <h2>Învață într-un mod mai simplu</h2>
+            --white: #ffffff;
+            --border: #e8def5;
 
-  </div>
-
-
-  <div class="benefit-grid">
-
-    <div class="benefit">
-
-      <div class="benefit-icon">✅</div>
-
-      <h3>Teste interactive</h3>
-
-      <p>
-        Exersează prin întrebări grilă și verifică imediat răspunsurile.
-      </p>
-
-    </div>
+            --green: #65a97a;
+        }
 
 
-    <div class="benefit">
-
-      <div class="benefit-icon">⚡</div>
-
-      <h3>Feedback instant</h3>
-
-      <p>
-        Vezi rapid rezultatul și scorul obținut după fiecare test.
-      </p>
-
-    </div>
+        * {
+            box-sizing: border-box;
+        }
 
 
-    <div class="benefit">
+        html {
+            scroll-behavior: smooth;
+        }
 
-      <div class="benefit-icon">📱</div>
 
-      <h3>Învață oriunde</h3>
+        body {
+            margin: 0;
+            padding: 0;
 
-      <p>
-        Pregătește-te direct de pe telefon, atunci când ai câteva minute libere.
-      </p>
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
 
-    </div>
+            color: var(--text);
 
-  </div>
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #faf8fd 45%,
+                    #ffffff 100%
+                );
 
-</div>
+            line-height: 1.6;
+        }
 
-</section> <!-- CTA --> <section class="cta">
-<h2>Pregătită pentru titularizare? 🌷</h2>
 
-<p>
-  Descarcă aplicațiile și începe să exersezi.
-</p>
+        a {
+            color: inherit;
+        }
 
-<a
-  class="cta-button"
-  href="https://play.google.com/store/apps/dev?id=4987630876494391159"
-  target="_blank"
-  rel="noopener"
->
-  Deschide Google Play
-</a>
 
-</section> <!-- FOOTER --> <footer>
-<p>
-  © 2026 TitularApp Educatoare
-</p>
+        /* =========================
+           HEADER
+        ========================= */
 
-<div class="footer-links">
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
 
-  <a href="privacy-policy.html">
-    Politica de confidențialitate
-  </a>
+            background: rgba(255, 255, 255, 0.94);
 
-  <span>·</span>
+            backdrop-filter: blur(12px);
 
-  <a
-    href="https://play.google.com/store/apps/dev?id=4987630876494391159"
-    target="_blank"
-    rel="noopener"
-  >
-    Google Play
-  </a>
+            border-bottom: 1px solid var(--border);
+        }
 
-</div>
 
-<p class="footer-disclaimer">
-  TitularApp Educatoare este un proiect educațional independent și
-  nu este afiliat, sponsorizat sau aprobat de Ministerul Educației.
-  Aplicațiile au rol de pregătire și exersare și nu garantează
-  obținerea unei anumite note sau promovarea examenului.
-</p>
+        .nav {
+            max-width: 1100px;
 
-</footer> </body> </html>
+            margin: 0 auto;
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            text-decoration: none;
+
+            color: var(--purple-dark);
+
+            font-weight: 750;
+
+            font-size: 19px;
+        }
+
+
+        .logo-icon {
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background: var(--purple-light);
+
+            font-size: 23px;
+        }
+
+
+        .nav-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 9px 17px;
+
+            border-radius: 10px;
+
+            background: var(--purple);
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 650;
+
+            transition: 0.2s ease;
+        }
+
+
+        .nav-button:hover {
+            background: var(--purple-dark);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 75px 20px 60px;
+
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            align-items: center;
+
+            gap: 60px;
+        }
+
+
+        .hero-badge {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 8px 13px;
+
+            background: var(--purple-light);
+
+            color: var(--purple-dark);
+
+            border: 1px solid var(--border);
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 650;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+            margin: 0;
+
+            font-size: clamp(38px, 5vw, 60px);
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+
+            color: var(--purple-dark);
+        }
+
+
+        .hero h1 span {
+            color: var(--pink);
+        }
+
+
+        .hero-description {
+            max-width: 650px;
+
+            margin: 22px 0 28px;
+
+            font-size: 18px;
+
+            color: var(--muted);
+
+            line-height: 1.7;
+        }
+
+
+        .hero-description strong {
+            color: var(--text);
+        }
+
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .button-primary,
+        .button-secondary {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 13px 20px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+
+        .button-primary {
+            background: var(--purple);
+
+            color: white;
+
+            box-shadow:
+                0 7px 20px rgba(118, 87, 173, 0.20);
+        }
+
+
+        .button-primary:hover {
+            background: var(--purple-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        .button-secondary {
+            background: white;
+
+            color: var(--purple-dark);
+
+            border: 1px solid var(--border);
+        }
+
+
+        .button-secondary:hover {
+            background: var(--purple-soft);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* HERO CARD */
+
+        .hero-card {
+            position: relative;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 28px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 18px 45px rgba(91, 64, 135, 0.10);
+        }
+
+
+        .hero-card-top {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero-card-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 17px;
+
+            background: var(--purple-light);
+
+            font-size: 29px;
+        }
+
+
+        .hero-card h3 {
+            margin: 0;
+
+            color: var(--purple-dark);
+
+            font-size: 19px;
+        }
+
+
+        .hero-card small {
+            color: var(--muted);
+        }
+
+
+        .hero-list {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+
+        .hero-list li {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 11px 0;
+
+            border-bottom: 1px solid #f1edf6;
+
+            color: #55505c;
+        }
+
+
+        .hero-list li:last-child {
+            border-bottom: none;
+        }
+
+
+        .check {
+            color: var(--green);
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 65px 20px;
+        }
+
+
+        .section-heading {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 38px;
+        }
+
+
+        .section-heading .eyebrow {
+            color: var(--pink);
+
+            font-size: 14px;
+
+            font-weight: 750;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-heading h2 {
+            margin: 0;
+
+            color: var(--purple-dark);
+
+            font-size: 32px;
+
+            line-height: 1.25;
+        }
+
+
+        .section-heading p {
+            margin: 12px 0 0;
+
+            color: var(--muted);
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           APP CARDS
+        ========================= */
+
+        .apps {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 24px;
+        }
+
+
+        .app-card {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 24px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 8px 25px rgba(91, 64, 135, 0.06);
+
+            transition: 0.25s ease;
+        }
+
+
+        .app-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(91, 64, 135, 0.11);
+        }
+
+
+        .app-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: var(--purple-light);
+
+            font-size: 32px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .app-card h3 {
+            margin: 0 0 10px;
+
+            color: var(--purple-dark);
+
+            font-size: 23px;
+        }
+
+
+        .app-card p {
+            margin: 0 0 18px;
+
+            color: var(--muted);
+        }
+
+
+        .app-features {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0 0 23px;
+        }
+
+
+        .app-features li {
+            display: flex;
+
+            gap: 9px;
+
+            margin: 9px 0;
+
+            color: #55505c;
+
+            font-size: 15px;
+        }
+
+
+        .app-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 100%;
+
+            padding: 12px 18px;
+
+            border-radius: 11px;
+
+            background: var(--purple);
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+
+        .app-button:hover {
+            background: var(--purple-dark);
+        }
+
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits-section {
+            background: var(--purple-soft);
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .benefits {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .benefit {
+            text-align: center;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 27px 20px;
+        }
+
+
+        .benefit-icon {
+            font-size: 31px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .benefit h3 {
+            margin: 0 0 7px;
+
+            color: var(--purple-dark);
+
+            font-size: 18px;
+        }
+
+
+        .benefit p {
+            margin: 0;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           EXAM SECTION
+        ========================= */
+
+        .exam-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #7657ad,
+                    #9275c5
+                );
+
+            color: white;
+
+            border-radius: 28px;
+
+            padding: 42px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px rgba(118, 87, 173, 0.20);
+        }
+
+
+        .exam-box .icon {
+            font-size: 42px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .exam-box h2 {
+            margin: 0 0 12px;
+
+            font-size: 31px;
+        }
+
+
+        .exam-box p {
+            max-width: 700px;
+
+            margin: 0 auto 24px;
+
+            color: rgba(255,255,255,0.90);
+
+            font-size: 16px;
+        }
+
+
+        .exam-button {
+            display: inline-flex;
+
+            padding: 13px 22px;
+
+            border-radius: 12px;
+
+            background: white;
+
+            color: var(--purple-dark);
+
+            text-decoration: none;
+
+            font-weight: 750;
+
+            transition: 0.2s ease;
+        }
+
+
+        .exam-button:hover {
+            transform: translateY(-2px);
+
+            background: #fff8fc;
+        }
+
+
+        /* =========================
+           DISCLAIMER
+        ========================= */
+
+        .disclaimer {
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding: 20px 22px;
+
+            background: #fffafc;
+
+            border: 1px solid #f1dce6;
+
+            border-radius: 15px;
+
+            color: #706974;
+
+            font-size: 13px;
+
+            text-align: center;
+        }
+
+
+        .disclaimer strong {
+            color: #5c5361;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: white;
+
+            border-top: 1px solid var(--border);
+
+            padding: 32px 20px;
+        }
+
+
+        .footer-inner {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .footer-brand {
+            color: var(--purple-dark);
+
+            font-weight: 700;
+        }
+
+
+        .footer-links {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+        }
+
+
+        .footer-links a {
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        .footer-links a:hover {
+            color: var(--purple);
+        }
+
+
+        .copyright {
+            max-width: 1100px;
+
+            margin: 20px auto 0;
+
+            padding-top: 18px;
+
+            border-top: 1px solid #f0ebf5;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding-top: 50px;
+
+                gap: 35px;
+            }
+
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+
+            .apps {
+                grid-template-columns: 1fr;
+            }
+
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-inner {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .nav {
+                padding: 12px 15px;
+            }
+
+
+            .logo {
+                font-size: 16px;
+            }
+
+
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+
+                font-size: 20px;
+            }
+
+
+            .nav-button {
+                padding: 8px 12px;
+
+                font-size: 12px;
+            }
+
+
+            .hero {
+                padding: 42px 15px 40px;
+            }
+
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+
+            .hero-card {
+                padding: 24px;
+            }
+
+
+            .section {
+                padding: 48px 15px;
+            }
+
+
+            .section-heading h2 {
+                font-size: 27px;
+            }
+
+
+            .app-card {
+                padding: 25px;
+            }
+
+
+            .exam-box {
+                padding: 32px 22px;
+            }
+
+
+            .exam-box h2 {
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <nav class="nav">
+
+            <a
+                href="https://titularappeducatoare.com/"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    🌸
+                </span>
+
+                <span>
+                    TitularApp Educatoare
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://play.google.com/store/apps/dev?id=4987630876494391159"
+                class="nav-button"
+                target="_blank"
+                rel="noopener"
+            >
+                📱 Aplicațiile noastre
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+
+            <div>
+
+                <div class="hero-badge">
+                    🌸 Pregătire pentru examenul de titularizare
+                </div>
+
+
+                <h1>
+
+                    Învață.
+
+                    <br>
+
+                    Exersează.
+
+                    <br>
+
+                    <span>Reușește.</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Aplicații educaționale create special pentru
+                    <strong>educatoare</strong>, pentru pregătirea și
+                    exersarea cunoștințelor necesare la
+                    <strong>examenul de titularizare</strong>.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=demo.titularapp.educatoare.gr.lit"
+                        class="button-primary"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        📖 Gramatică & Literatură
+                    </a>
+
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=demo.titularapp.quiz"
+                        class="button-secondary"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        🧸 Pedagogie & Metodică
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-top">
+
+                    <div class="hero-card-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pregătire pentru titularizare
+                        </h3>
+
+                        <small>
+                            Pentru învățământul preșcolar
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <ul class="hero-list">
+
+                    <li>
+                        <span class="check">✓</span>
+                        Teste grilă pentru exersare
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Gramatică și literatură
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Pedagogie și metodică
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Scor afișat după teste
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Învață direct de pe telefon
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             APPLICATIONS
+        ========================== -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Aplicațiile noastre
+                </div>
+
+                <h2>
+                    Tot ce ai nevoie pentru a exersa
+                </h2>
+
+                <p>
+                    Alege materia pe care vrei să o repeți și începe
+                    să te pregătești direct de pe telefon.
+                </p>
+
+            </div>
+
+
+
+            <div class="apps">
+
+
+                <!-- GRAMATICA -->
+
+                <article class="app-card">
+
+                    <div class="app-icon">
+                        📖
+                    </div>
+
+
+                    <h3>
+                        Gramatică & Literatură
+                    </h3>
+
+
+                    <p>
+                        EduTitGL este o aplicație dedicată pregătirii
+                        pentru examenul de titularizare, cu teste de
+                        limba română, gramatică și literatură.
+                    </p>
+
+
+                    <ul class="app-features">
+
+                        <li>
+                            <span class="check">✓</span>
+                            Teste de gramatică
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Teste de literatură
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Răspunsuri corecte evidențiate
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Scor afișat după fiecare test
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Interfață simplă și intuitivă
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=demo.titularapp.educatoare.gr.lit"
+                        class="app-button"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Descarcă aplicația pe Google Play →
+                    </a>
+
+                </article>
+
+
+
+                <!-- PEDAGOGIE -->
+
+                <article class="app-card">
+
+                    <div class="app-icon">
+                        🧸
+                    </div>
+
+
+                    <h3>
+                        Pedagogie & Metodică
+                    </h3>
+
+
+                    <p>
+                        TitularApp Educatoare P+M este dedicată
+                        pregătirii pentru titularizare în domeniul
+                        pedagogiei și metodicii învățământului preșcolar.
+                    </p>
+
+
+                    <ul class="app-features">
+
+                        <li>
+                            <span class="check">✓</span>
+                            Teste de pedagogie
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Teste de metodică
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Resurse pentru învățare
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Notițe personale
+                        </li>
+
+                        <li>
+                            <span class="check">✓</span>
+                            Scor și feedback instant
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=demo.titularapp.quiz"
+                        class="app-button"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Descarcă aplicația pe Google Play →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BENEFITS
+        ========================== -->
+
+        <section class="benefits-section">
+
+            <div class="section">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        De ce TitularApp?
+                    </div>
+
+                    <h2>
+                        Pregătire simplă, direct de pe telefon
+                    </h2>
+
+                    <p>
+                        Exersează atunci când ai timp și urmărește-ți
+                        rezultatele după fiecare test.
+                    </p>
+
+                </div>
+
+
+                <div class="benefits">
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Teste interactive
+                        </h3>
+
+                        <p>
+                            Verifică-ți cunoștințele prin întrebări
+                            grilă și exerciții de exersare.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            Feedback instant
+                        </h3>
+
+                        <p>
+                            Vezi rapid răspunsurile și scorul obținut
+                            după fiecare test.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            📱
+                        </div>
+
+                        <h3>
+                            Învață oriunde
+                        </h3>
+
+                        <p>
+                            Pregătește-te de pe telefon, acasă,
+                            în pauză sau atunci când ai câteva minute.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             EXAM
+        ========================== -->
+
+        <section class="section">
+
+            <div class="exam-box">
+
+                <div class="icon">
+                    🌷
+                </div>
+
+                <h2>
+                    Te pregătești pentru titularizare?
+                </h2>
+
+                <p>
+                    Descoperă aplicațiile TitularApp Educatoare și
+                    exersează pentru examenul de titularizare din
+                    domeniul învățământului preșcolar.
+                </p>
+
+                <a
+                    href="https://play.google.com/store/apps/dev?id=4987630876494391159"
+                    class="exam-button"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Vezi toate aplicațiile pe Google Play
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DISCLAIMER
+        ========================== -->
+
+        <section class="section" style="padding-top: 10px;">
+
+            <div class="disclaimer">
+
+                <strong>Important:</strong>
+
+                TitularApp Educatoare este un proiect educațional
+                independent. Aplicațiile sunt create pentru pregătire
+                și exersare pentru examenul de titularizare și nu sunt
+                afiliate, sponsorizate sau aprobate de Ministerul
+                Educației ori de alte instituții publice.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+
+            <div class="footer-brand">
+
+                🌸 TitularApp Educatoare
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a
+                    href="https://titularappeducatoare.com/privacy-policy.html"
+                >
+                    Politica de confidențialitate
+                </a>
+
+
+                <a
+                    href="https://play.google.com/store/apps/dev?id=4987630876494391159"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Google Play
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 TitularApp Educatoare. Toate drepturile rezervate.
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
