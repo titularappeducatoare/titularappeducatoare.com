@@ -1,422 +1,144 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-    <title>Politica de confidențialitate - TitularApp Educatoare</title>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #faf8ff 0%, #ffffff 100%);
+        color: #444;
+        line-height: 1.7;
+    }
 
-    <meta name="description" content="Politica de confidențialitate pentru aplicațiile dezvoltate și publicate de TitularApp Educatoare.">
+    .page {
+        width: 100%;
+        padding: 50px 20px;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 45px;
+        border-radius: 24px;
+        border: 1px solid #eee7ff;
+        box-shadow: 0 8px 30px rgba(103, 72, 160, 0.08);
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f6f7fb;
-            color: #333;
-            line-height: 1.7;
-        }
+    h1 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: #6d4bb3;
+        font-size: 34px;
+        line-height: 1.2;
+        font-weight: 700;
+    }
 
+    h2 {
+        margin-top: 38px;
+        margin-bottom: 12px;
+        color: #7654b8;
+        font-size: 21px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 12px 0;
+    }
+
+    ul {
+        margin: 12px 0;
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 6px;
+    }
+
+    .date {
+        color: #999;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .intro {
+        background: #f7f3ff;
+        border: 1px solid #e8defb;
+        border-left: 5px solid #8b68c7;
+        padding: 18px 20px;
+        margin: 25px 0;
+        border-radius: 12px;
+    }
+
+    .intro strong {
+        color: #6845a8;
+    }
+
+    .important {
+        font-weight: 700;
+        color: #6845a8;
+    }
+
+    .contact {
+        background: #faf8ff;
+        border: 1px solid #e8defb;
+        padding: 22px;
+        margin-top: 20px;
+        border-radius: 14px;
+    }
+
+    .contact a {
+        color: #7654b8;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .contact a:hover {
+        color: #5d3d9e;
+        text-decoration: underline;
+    }
+
+    .footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee7ff;
+        color: #999;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    a {
+        color: #7654b8;
+    }
+
+    a:hover {
+        color: #5d3d9e;
+    }
+
+    @media (max-width: 600px) {
         .page {
-            width: 100%;
-            padding: 40px 20px;
+            padding: 25px 12px;
         }
 
         .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 45px;
-            border-radius: 16px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            padding: 28px 20px;
+            border-radius: 18px;
         }
 
         h1 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            color: #222;
-            font-size: 34px;
-            line-height: 1.2;
+            font-size: 28px;
         }
 
         h2 {
-            margin-top: 35px;
-            margin-bottom: 12px;
-            color: #222;
-            font-size: 22px;
+            font-size: 20px;
+            margin-top: 30px;
         }
 
-        p {
-            margin: 12px 0;
+        body {
+            font-size: 15px;
         }
-
-        ul {
-            margin: 12px 0;
-            padding-left: 25px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        .date {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .intro {
-            background: #f1f6ff;
-            border-left: 4px solid #4a73e8;
-            padding: 18px 20px;
-            margin: 25px 0;
-            border-radius: 6px;
-        }
-
-        .intro strong {
-            color: #234aa0;
-        }
-
-        .important {
-            font-weight: bold;
-        }
-
-        .contact {
-            background: #f8f8f8;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-
-        .contact a {
-            color: #3f68d5;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
-            color: #777;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            .page {
-                padding: 20px 12px;
-            }
-
-            .container {
-                padding: 25px 20px;
-                border-radius: 12px;
-            }
-
-            h1 {
-                font-size: 27px;
-            }
-
-            h2 {
-                font-size: 20px;
-                margin-top: 30px;
-            }
-
-            body {
-                font-size: 15px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <main class="page">
-
-        <div class="container">
-
-            <h1>Politica de confidențialitate</h1>
-
-            <div class="date">
-                Ultima actualizare: 30 septembrie 2026
-            </div>
-
-            <div class="intro">
-                <strong>Important:</strong>
-                Această Politică de confidențialitate se aplică tuturor aplicațiilor
-                mobile dezvoltate și publicate de <strong>TitularApp Educatoare</strong>.
-            </div>
-
-            <p>
-                Aplicațiile <strong>TitularApp Educatoare</strong> sunt aplicații
-                educaționale create pentru a ajuta utilizatorii să învețe, să exerseze
-                și să se pregătească pentru diferite examene, inclusiv pentru examenul
-                de titularizare.
-            </p>
-
-            <h2>1. Despre TitularApp Educatoare</h2>
-
-            <p>
-                <strong>TitularApp Educatoare</strong> este un proiect independent
-                care dezvoltă și publică aplicații educaționale.
-            </p>
-
-            <p>
-                Aplicațiile sunt concepute pentru a oferi utilizatorilor teste,
-                exerciții și materiale de exersare într-un mod simplu și accesibil.
-            </p>
-
-            <p>
-                Pentru întrebări referitoare la aplicațiile
-                <strong>TitularApp Educatoare</strong> sau la această Politică de
-                confidențialitate, ne puteți contacta la:
-            </p>
-
-            <p>
-                <strong>
-                    <a href="mailto:titularappeducatoare@gmail.com">
-                        titularappeducatoare@gmail.com
-                    </a>
-                </strong>
-            </p>
-
-            <h2>2. Date personale</h2>
-
-            <p>
-                Aplicațiile <strong>TitularApp Educatoare</strong> nu solicită
-                utilizatorilor să își creeze un cont pentru utilizarea normală
-                a aplicațiilor.
-            </p>
-
-            <p>Nu solicităm în mod direct informații personale precum:</p>
-
-            <ul>
-                <li>numele și prenumele;</li>
-                <li>adresa de e-mail;</li>
-                <li>numărul de telefon;</li>
-                <li>adresa de domiciliu;</li>
-                <li>parole;</li>
-                <li>date bancare.</li>
-            </ul>
-
-            <p class="important">
-                TitularApp Educatoare nu colectează și nu păstrează într-o bază
-                de date proprie datele personale ale utilizatorilor.
-            </p>
-
-            <h2>3. Informații salvate pe dispozitiv</h2>
-
-            <p>
-                În funcție de aplicație, anumite informații pot fi salvate local
-                pe dispozitivul utilizatorului pentru funcționarea aplicației.
-            </p>
-
-            <p>Acestea pot include, de exemplu:</p>
-
-            <ul>
-                <li>progresul utilizatorului;</li>
-                <li>rezultatele testelor;</li>
-                <li>scorurile;</li>
-                <li>anumite preferințe sau setări ale aplicației.</li>
-            </ul>
-
-            <p>
-                Aceste informații sunt utilizate pentru funcționarea aplicației
-                și nu sunt transmise către o bază de date proprie administrată
-                de <strong>TitularApp Educatoare</strong>.
-            </p>
-
-            <h2>4. Servicii și furnizori terți</h2>
-
-            <p>
-                Unele aplicații <strong>TitularApp Educatoare</strong> pot utiliza
-                servicii furnizate de companii terțe pentru funcționarea anumitor
-                funcții ale aplicației.
-            </p>
-
-            <p>
-                Acești furnizori pot procesa automat anumite informații tehnice
-                necesare furnizării serviciilor respective.
-            </p>
-
-            <p>Aceste informații pot include, în funcție de serviciul utilizat:</p>
-
-            <ul>
-                <li>informații despre dispozitiv;</li>
-                <li>adresa IP;</li>
-                <li>identificatori de publicitate;</li>
-                <li>informații tehnice despre aplicație;</li>
-                <li>informații necesare afișării sau măsurării reclamelor.</li>
-            </ul>
-
-            <p>
-                Aceste informații sunt procesate de furnizorii respectivi
-                în conformitate cu propriile politici de confidențialitate.
-            </p>
-
-            <p class="important">
-                TitularApp Educatoare nu utilizează aceste informații pentru
-                a crea o bază de date proprie cu date personale ale utilizatorilor.
-            </p>
-
-            <h2>5. Publicitate</h2>
-
-            <p>
-                Unele aplicații <strong>TitularApp Educatoare</strong> pot afișa
-                reclame furnizate de servicii de publicitate precum
-                <strong>Google AdMob</strong>.
-            </p>
-
-            <p>
-                Serviciile de publicitate pot utiliza anumite informații tehnice,
-                identificatori de publicitate și informații despre dispozitiv
-                pentru afișarea, personalizarea și măsurarea reclamelor, în funcție
-                de setările utilizatorului și de cerințele platformei.
-            </p>
-
-            <p>
-                Pentru mai multe informații despre modul în care Google gestionează
-                datele, utilizatorii pot consulta politica de confidențialitate Google.
-            </p>
-
-            <h2>6. Scopul aplicațiilor</h2>
-
-            <p>
-                Aplicațiile <strong>TitularApp Educatoare</strong> au un scop
-                educațional.
-            </p>
-
-            <p>
-                Unele aplicații sunt create special pentru pregătirea și exersarea
-                pentru <strong>examenul de titularizare</strong>, inclusiv pentru
-                domeniul învățământului preșcolar.
-            </p>
-
-            <p>
-                Aplicațiile pot conține teste, întrebări, exerciții și materiale
-                de exersare pentru discipline precum gramatică, literatură,
-                pedagogie și metodică, în funcție de aplicație.
-            </p>
-
-            <p>
-                Scopul acestora este de a ajuta utilizatorii să își verifice
-                și să își consolideze cunoștințele.
-            </p>
-
-            <h2>7. Aplicațiile nu sunt oficiale</h2>
-
-            <p>
-                Aplicațiile <strong>TitularApp Educatoare</strong> sunt dezvoltate
-                independent.
-            </p>
-
-            <p>
-                Acestea nu sunt afiliate, administrate, sponsorizate sau aprobate
-                de <strong>Ministerul Educației</strong> sau de alte instituții
-                publice, cu excepția cazului în care acest lucru este menționat
-                în mod expres într-o anumită aplicație.
-            </p>
-
-            <p>
-                Denumirile examenelor, disciplinelor, programelor sau instituțiilor
-                oficiale pot fi utilizate pentru a descrie scopul educațional
-                al aplicațiilor.
-            </p>
-
-            <h2>8. Informații despre examene</h2>
-
-            <p>
-                Informațiile referitoare la examene, programe, bibliografii și
-                metodologii se pot modifica în timp.
-            </p>
-
-            <p>
-                Utilizatorii trebuie să verifice informațiile oficiale publicate
-                de autoritățile competente.
-            </p>
-
-            <p>
-                Aplicațiile <strong>TitularApp Educatoare</strong> sunt instrumente
-                de pregătire și exersare și nu garantează promovarea unui examen
-                sau obținerea unei anumite note.
-            </p>
-
-            <h2>9. Securitatea informațiilor</h2>
-
-            <p>
-                <strong>TitularApp Educatoare</strong> nu solicită și nu păstrează
-                într-o bază de date proprie informații personale necesare
-                identificării utilizatorilor.
-            </p>
-
-            <p>
-                Informațiile salvate local de aplicații rămân pe dispozitivul
-                utilizatorului, în măsura în care aplicația respectivă utilizează
-                astfel de funcții.
-            </p>
-
-            <h2>10. Confidențialitatea copiilor</h2>
-
-            <p>
-                Aplicațiile <strong>TitularApp Educatoare</strong> sunt create
-                în principal pentru persoane care doresc să învețe și să se
-                pregătească pentru examene.
-            </p>
-
-            <p>
-                Aplicațiile nu solicită în mod intenționat copiilor să furnizeze
-                date personale.
-            </p>
-
-            <h2>11. Modificarea Politicii de confidențialitate</h2>
-
-            <p>
-                Această Politică de confidențialitate poate fi actualizată dacă
-                apar modificări ale aplicațiilor <strong>TitularApp Educatoare</strong>,
-                ale serviciilor utilizate sau ale cerințelor legale și ale
-                platformelor de distribuție.
-            </p>
-
-            <p>
-                Data ultimei actualizări va fi afișată în partea de sus
-                a acestei pagini.
-            </p>
-
-            <h2>12. Contact</h2>
-
-            <div class="contact">
-
-                <p>
-                    Pentru întrebări privind confidențialitatea, datele
-                    utilizatorilor sau aplicațiile <strong>TitularApp Educatoare</strong>,
-                    ne puteți contacta la:
-                </p>
-
-                <p>
-                    <strong>
-                        <a href="mailto:titularappeducatoare@gmail.com">
-                            titularappeducatoare@gmail.com
-                        </a>
-                    </strong>
-                </p>
-
-            </div>
-
-            <div class="footer">
-                © 2026 TitularApp Educatoare. Toate drepturile rezervate.
-            </div>
-
-        </div>
-
-    </main>
-
-</body>
-</html>
+    }
+</style>
